@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'chivonormal';
+	font-style: normal;
+	font-weight: 300;
+	src:
+		url('../fonts/Chivo-Light.woff2') format('woff2'),
+		url('../fonts/Chivo-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'chivobold';
+	font-style: normal;
+	font-weight: 700;
+	src:
+		url('../fonts/Chivo-Bold.woff2') format('woff2'),
+		url('../fonts/Chivo-Bold.woff') format('woff');
+}
+
+//for font
+body {
+  font-family: 'chivonormal';
+}
+h1 {
+  color: green;
+}
+span {
+	width: 372px;
+	height: 354px;
+	background-image: url('../images/tho.jpg');
+}
