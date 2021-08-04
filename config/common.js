@@ -8,7 +8,7 @@ module.exports = {
     filename: 'js/[name].min.js',
     //path: path.resolve(__dirname, 'dist'), 
     path: path.resolve('./dist'),
-    //path: process.cwd() //current working directory
+    //path: process.cwd() //current working directory,
   },
   watchOptions: {
     ignored: [
@@ -19,31 +19,17 @@ module.exports = {
     rules: [
       {
         test: /\.(woff|woff2)$/,
-        // type: 'asset/resource',
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[folder]/[name].[ext]',
-              // useRelativePath: true,
-              //outputPath: './fonts'
-            }
-          }
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]'
+        }
       },
       {
         test: /\.(gif|jpg|svg|png|ico)$/,
-        //type: 'asset/resource',
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[folder]/[name].[ext]',
-              // useRelativePath: true,
-              //outputPath: './images'
-            }
-          }
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]'
+        }
       },
     ],
   },
